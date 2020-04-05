@@ -281,3 +281,8 @@ header .row {
   padding: 0.25em 0.75em;
   margin: 0 0.25em;
 }
+
+/* Dark mode */
+.body-dark {
+  background-color: hsl(207, 26%, 17%);
+}
