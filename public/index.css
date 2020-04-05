@@ -25,7 +25,8 @@ button {
   flex-wrap: wrap;
 }
 
-.box-shadow {
+.box-shadow,
+.box-shadow-dark {
   border-radius: 4px;
   box-shadow: 1px 1px 6px hsl(0, 0%, 90%);
 }
@@ -42,7 +43,8 @@ header .row {
   padding: 2% 6%;
 }
 
-.brand-title {
+.brand-title,
+.brand-title-dark {
   color: hsl(200, 15%, 8%);
   font-weight: 800;
   font-size: 1.5rem;
@@ -109,7 +111,8 @@ header .row {
   color: #fff;
 }
 
-.filter {
+.filter,
+.filter-dark {
   position: relative;
   padding: 1em 2em;
   text-align: baseline;
@@ -126,7 +129,7 @@ header .row {
 .dropdown {
   position: absolute;
   padding: 1em 2em;
-  min-width: 125px;
+  min-width: 120px;
   left: 0;
   top: 3.25em;
   display: none;
@@ -283,6 +286,20 @@ header .row {
 }
 
 /* Dark mode */
-.body-dark {
-  background-color: hsl(207, 26%, 17%);
+.header-dark {
+  color: #fff;
+  box-shadow: 1px 1px 6px hsl(207, 26%, 8%);
+  background-color: hsl(209, 23%, 22%);
+}
+
+.brand-title-dark {
+  color: #fff;
+}
+
+.box-shadow-dark {
+  box-shadow: 1px 1px 6px hsl(207, 26%, 8%);
+}
+
+.filter-dark {
+  background-color: hsl(209, 23%, 22%);
 }

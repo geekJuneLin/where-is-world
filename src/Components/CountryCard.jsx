@@ -1,12 +1,23 @@
 import React from "react";
 
 function CountryCard(props) {
+  // destructuring props
+  const { darkMode } = props;
+
   const population = props.population
     .toString()
     .match(/(\d+?)(?=(\d{3})+(?!\d)|$)/g);
 
   return (
-    <div className="country-card box-shadow">
+    <div
+      className={
+        darkMode ? "country-card box-shadow-dark" : "country-card box-shadow"
+      }
+      style={{
+        backgroundColor: darkMode && "hsl(209, 23%, 22%)",
+        color: darkMode && "#fff",
+      }}
+    >
       <img src={props.flag} alt="germany-flag" />
       <div className="details">
         <h1>{props.name}</h1>

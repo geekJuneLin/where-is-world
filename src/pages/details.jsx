@@ -2,15 +2,20 @@ import React from "react";
 import Header from "../Components/Header";
 import DetailSection from "../Components/DetailSection";
 
-export default function Details({ match, countries }) {
+export default function Details({
+  match,
+  countries,
+  onSwitchBtnClicked,
+  darkMode,
+}) {
   console.log(match);
   const {
     params: { countryId },
   } = match;
   return (
     <div>
-      <Header />
-      {countries.map((country) => {
+      <Header switchMode={onSwitchBtnClicked} darkMode={darkMode} />
+      {countries.map((country, index) => {
         if (country.name === countryId) {
           const {
             name,
@@ -28,6 +33,7 @@ export default function Details({ match, countries }) {
 
           return (
             <DetailSection
+              key={index}
               countries={countries}
               flag={flag}
               name={name}
@@ -40,6 +46,7 @@ export default function Details({ match, countries }) {
               currencies={currencies}
               languages={languages}
               borders={borders}
+              darkMode={darkMode}
             />
           );
         }

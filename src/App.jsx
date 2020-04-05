@@ -52,7 +52,12 @@ class App extends Component {
           ></Route>
           <Route
             render={(props) => (
-              <Details countries={this.state.countries} {...props} />
+              <Details
+                countries={this.state.countries}
+                onSwitchBtnClicked={this.switchMode}
+                darkMode={this.state.darkMode}
+                {...props}
+              />
             )}
             exact
             path="/details/:countryId"

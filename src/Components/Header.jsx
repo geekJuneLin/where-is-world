@@ -6,11 +6,19 @@ function Header(props) {
   }
 
   return (
-    <header>
+    <header className={props.darkMode ? "header-dark" : undefined}>
       <div className="row">
-        <div className="brand-title">Where in the world?</div>
+        <div className={props.darkMode ? "brand-title-dark" : "brand-title"}>
+          Where in the world?
+        </div>
         <div className="mode-switch">
-          <button onClick={switchMode}>
+          <button
+            onClick={switchMode}
+            style={{
+              backgroundColor: props.darkMode && "hsl(209, 23%, 22%)",
+              color: props.darkMode && "#fff",
+            }}
+          >
             <i className="far fa-moon switch-icon"></i> Dark Mode
           </button>
         </div>

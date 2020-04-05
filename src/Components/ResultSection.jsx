@@ -15,6 +15,7 @@ function ResultSection(props) {
               population={c.population}
               region={c.region}
               capital={c.capital}
+              darkMode={props.darkMode}
             />
           </Link>
         ))}
