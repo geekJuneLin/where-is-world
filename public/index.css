@@ -2,7 +2,7 @@
 
 /* general */
 
-* {
+/* * {
   margin: 0;
   padding: 0;
 }
@@ -29,11 +29,11 @@ button {
 .box-shadow-dark {
   border-radius: 4px;
   box-shadow: 1px 1px 6px hsl(0, 0%, 90%);
-}
+} */
 
 /* header */
 
-header {
+/* header {
   background-color: #fff;
   box-shadow: 0 1px 6px hsl(0, 0%, 90%);
 }
@@ -66,11 +66,11 @@ header .row {
 
 .switch-icon {
   margin: 0 1em;
-}
+} */
 
 /* search & result section */
 
-.search-result {
+/* .search-result {
   padding: 4% 6%;
 }
 
@@ -159,10 +159,10 @@ header .row {
 .filter label {
   margin-right: 2.5em;
   padding-top: 0.8em;
-}
+} */
 
 /* countries section */
-
+/* 
 .countries-section {
   padding: 4% 6%;
 }
@@ -198,11 +198,11 @@ header .row {
 
 .details span {
   font-weight: 300;
-}
+} */
 
 /*////// details page ////////*/
 
-.details-section {
+/* .details-section {
   padding: 4% 6%;
 }
 
@@ -283,10 +283,10 @@ header .row {
 .border-card {
   padding: 0.25em 0.75em;
   margin: 0 0.25em;
-}
+} */
 
 /* Dark mode */
-.header-dark {
+/* .header-dark {
   color: #fff;
   box-shadow: 1px 1px 6px hsl(207, 26%, 8%);
   background-color: hsl(209, 23%, 22%);
@@ -302,4 +302,4 @@ header .row {
 
 .filter-dark {
   background-color: hsl(209, 23%, 22%);
-}
+} */

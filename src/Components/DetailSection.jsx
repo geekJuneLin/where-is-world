@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function DetailSection(props) {
   //destructuring props
@@ -15,6 +16,7 @@ export default function DetailSection(props) {
     borders,
     nativeName,
     darkMode,
+    countries,
   } = props;
 
   return (
@@ -82,7 +84,8 @@ export default function DetailSection(props) {
                 Border Countries:
                 {borders.map((border, index) => {
                   return (
-                    <span
+                    <Link
+                      to={"/details/" + border}
                       className={
                         darkMode
                           ? "border-card box-shadow-dark"
@@ -91,7 +94,7 @@ export default function DetailSection(props) {
                       key={index}
                     >
                       {border}
-                    </span>
+                    </Link>
                   );
                 })}
               </p>

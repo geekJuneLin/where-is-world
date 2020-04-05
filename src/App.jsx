@@ -1,6 +1,12 @@
 import React, { Component } from "react";
+import "../src/App.css";
 import Home from "./pages/home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useHistory,
+} from "react-router-dom";
 import Details from "./pages/details";
 
 class App extends Component {
@@ -11,6 +17,11 @@ class App extends Component {
 
   switchMode = () => {
     this.setState({ darkMode: !this.state.darkMode });
+  };
+
+  //go back function
+  goBack = () => {
+    useHistory().goBack();
   };
 
   componentDidMount() {
