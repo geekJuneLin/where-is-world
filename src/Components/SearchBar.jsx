@@ -2,7 +2,7 @@ import React from "react";
 
 function SearchBar(props) {
   // destructuring props
-  const { darkMode } = props;
+  const { darkMode, onUpdate } = props;
 
   const [isShow, setShow] = React.useState(false);
 
@@ -17,6 +17,12 @@ function SearchBar(props) {
     setShow(!isShow);
   }
 
+  // search functionality
+  function onSearch(e) {
+    const { value } = e.target;
+    onUpdate(value);
+  }
+
   return (
     <section className="search-result">
       <div className="row">
@@ -25,6 +31,7 @@ function SearchBar(props) {
             <i className="fas fa-search"></i>
           </button>
           <input
+            onChange={onSearch}
             className={darkMode ? "box-shadow-dark" : "box-shadow"}
             type="search"
             name=""
