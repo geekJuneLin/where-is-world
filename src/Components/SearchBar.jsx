@@ -2,9 +2,11 @@ import React from "react";
 
 function SearchBar(props) {
   // destructuring props
-  const { darkMode, onUpdate } = props;
+  const { darkMode, onUpdate, onFiltered } = props;
 
   const [isShow, setShow] = React.useState(false);
+
+  const conditions = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
 
   const darkButton = {
     backgroundColor: darkMode && "hsl(209, 23%, 22%)",
@@ -22,6 +24,10 @@ function SearchBar(props) {
     const { value } = e.target;
     onUpdate(value);
   }
+
+  const onFilter = (c) => {
+    onFiltered(c);
+  };
 
   return (
     <section className="search-result">
@@ -69,11 +75,13 @@ function SearchBar(props) {
             }}
           >
             <ul>
-              <li>Africa</li>
-              <li>America</li>
-              <li>Asia</li>
-              <li>Europe</li>
-              <li>Oceania</li>
+              {conditions.map((c, index) => {
+                return (
+                  <li key={index} onClick={() => onFilter(c)}>
+                    {c}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

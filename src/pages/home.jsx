@@ -16,11 +16,28 @@ export default function Home({ countries, onSwitchBtnClicked, darkMode }) {
     setSearchedCountries(newSearchedCountries);
   }
 
+  // update the filtered countries
+  const filteredCountries = (name) => {
+    console.log("filtered countries by: " + name);
+    const newFilteredCountries = countries.filter((c) => {
+      return c.region.includes(name);
+    });
+    console.log(newFilteredCountries);
+    setSearchedCountries(newFilteredCountries);
+  };
+
   return (
     <div>
       <Header switchMode={onSwitchBtnClicked} darkMode={darkMode} />
-      <SearchBar darkMode={darkMode} onUpdate={updateSearchedCountries} />
-      <ResultSection countries={searchedCountries} darkMode={darkMode} />
+      <SearchBar
+        darkMode={darkMode}
+        onUpdate={updateSearchedCountries}
+        onFiltered={filteredCountries}
+      />
+      <ResultSection
+        countries={searchedCountries.length > 0 ? searchedCountries : countries}
+        darkMode={darkMode}
+      />
     </div>
   );
 }

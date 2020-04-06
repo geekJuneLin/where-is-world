@@ -92,6 +92,10 @@ export default function DetailSection(props) {
                           : "border-card box-shadow"
                       }
                       key={index}
+                      style={{
+                        backgroundColor: darkMode && "hsl(209, 23%, 22%)",
+                        color: darkMode && "#fff",
+                      }}
                     >
                       {border}
                     </Link>
