@@ -8,7 +8,13 @@ function Header(props) {
   return (
     <header className={props.darkMode ? "header-dark" : undefined}>
       <div className="row">
-        <div className={props.darkMode ? "brand-title-dark" : "brand-title"}>
+        <div
+          className={
+            props.darkMode
+              ? "brand-title-dark brand-title-mobile"
+              : "brand-title brand-title-mobile"
+          }
+        >
           Where in the world?
         </div>
         <div className="mode-switch">

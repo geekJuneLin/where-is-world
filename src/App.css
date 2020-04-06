@@ -275,6 +275,10 @@ header .row {
   width: 100%;
 }
 
+.borders a {
+  margin: 6px;
+}
+
 .borders p {
   display: flex;
   flex-wrap: wrap;
@@ -302,4 +306,76 @@ header .row {
 
 .filter-dark {
   background-color: hsl(209, 23%, 22%);
+}
+
+/* mobile size */
+
+@media only screen and (max-width: 1450px) {
+  .details-section a {
+    position: relative;
+    top: 4em;
+  }
+
+  .country-details {
+    margin-top: 8em;
+  }
+
+  .country-details img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .info-mobile {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .info-mobile > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .left-mobile,
+  .right-mobile {
+    position: static;
+    width: 100%;
+  }
+
+  .borders a {
+    position: static;
+    /* margin: 6px; */
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .country-card-mobile {
+    max-width: 100%;
+  }
+
+  .countries-section > div {
+    justify-content: center;
+  }
+
+  .input-mobile form input[type="search"] {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .brand-title-mobile {
+    font-size: 1.2rem;
+    padding: 24px 0;
+  }
+
+  .input-mobile form input[type="search"] {
+    width: 100%;
+    margin-bottom: 8%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .brand-title-mobile {
+    font-size: 1rem;
+  }
 }

@@ -30,15 +30,15 @@ function SearchBar(props) {
   };
 
   return (
-    <section className="search-result">
+    <section className="search-result input-mobile">
       <div className="row">
         <form action="/">
-          <button className="search-btn">
+          <button className="search-btn ">
             <i className="fas fa-search"></i>
           </button>
           <input
             onChange={onSearch}
-            className={darkMode ? "box-shadow-dark" : "box-shadow"}
+            className={darkMode ? "box-shadow-dark " : "box-shadow "}
             type="search"
             name=""
             id="search"

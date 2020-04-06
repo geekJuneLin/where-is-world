@@ -20,7 +20,7 @@ export default function DetailSection(props) {
   } = props;
 
   return (
-    <section className="details-section">
+    <section className="details-section details-section-mobile">
       <a
         href="/"
         className={darkMode ? "box-shadow-dark" : "box-shadow"}
@@ -32,11 +32,11 @@ export default function DetailSection(props) {
         {" "}
         <i className="fas fa-arrow-left"></i> Back{" "}
       </a>
-      <div className="country-details">
+      <div className="country-details country-details-mobile">
         <img src={flag} alt="" />
-        <div className="info" style={{ color: darkMode && "#fff" }}>
+        <div className="info info-mobile" style={{ color: darkMode && "#fff" }}>
           <div>
-            <div className="left">
+            <div className="left left-mobile">
               <h1>{name}</h1>
               <p>
                 Native Name: <span>{nativeName}</span>
@@ -61,7 +61,7 @@ export default function DetailSection(props) {
               </p>
             </div>
 
-            <div className="right">
+            <div className="right right-mobile">
               <p>
                 Top Level Domain: <span>{topLevelDomain}</span>
               </p>

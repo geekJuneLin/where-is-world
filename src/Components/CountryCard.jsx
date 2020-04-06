@@ -11,7 +11,9 @@ function CountryCard(props) {
   return (
     <div
       className={
-        darkMode ? "country-card box-shadow-dark" : "country-card box-shadow"
+        darkMode
+          ? "country-card  country-card-mobile box-shadow-dark"
+          : "country-card country-card-mobile box-shadow"
       }
       style={{
         backgroundColor: darkMode && "hsl(209, 23%, 22%)",
